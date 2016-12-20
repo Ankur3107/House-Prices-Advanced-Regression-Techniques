@@ -128,3 +128,13 @@ t$GarageYrBlt <-NULL
 x <- predict(model3,t)
 t$GarageYrBlt <- ifelse(is.na(train$GarageYrBlt),x,train$GarageYrBlt)
 train <- t
+
+
+
+#factor type correlation with target
+
+
+
+ggplot(train,aes(train$SalePrice,train[,train_NA_factor_type[1]])) + geom_boxplot()
+
+
